@@ -7,7 +7,7 @@ import numpy as np
 
 from PIL import Image, ImageOps
 
-
+#multi operation on the image and label.
 class Compose(object):
     def __init__(self, augmentations):
         self.augmentations = augmentations
@@ -28,7 +28,7 @@ class Compose(object):
 
         return img, mask
 
-
+#
 class RandomCrop(object):
     def __init__(self, size, padding=0):
         if isinstance(size, numbers.Number):
